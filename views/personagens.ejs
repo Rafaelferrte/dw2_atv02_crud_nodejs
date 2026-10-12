@@ -1,0 +1,38 @@
+<%- include("partials/header") %>
+
+<section class="pagina-categoria">
+    <div class="titulo-pagina">
+        <p class="subtitulo">A Sociedade do Anel</p>
+        <h1>Personagens</h1>
+        <p>
+            Conheça alguns dos personagens que participaram da jornada
+            pela Terra-média.
+        </p>
+    </div>
+
+    <div class="tabela-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Raça</th>
+                    <th>Origem</th>
+                    <th>Papel</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% personagens.forEach(function (personagem) { %>
+                    <tr>
+                        <td><%= personagem.nome %></td>
+                        <td><%= personagem.raca %></td>
+                        <td><%= personagem.origem %></td>
+                        <td><%= personagem.papel %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<%- include("partials/footer") %>

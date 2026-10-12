@@ -1,0 +1,41 @@
+<%- include("partials/header") %>
+
+<section class="pagina-categoria">
+    <div class="titulo-pagina">
+        <p class="subtitulo">Explore o mapa</p>
+        <h1>Locais da Terra-média</h1>
+        <p>
+            Descubra alguns dos territórios mais importantes dessa história.
+        </p>
+    </div>
+
+    <div class="tabela-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Local</th>
+                    <th>Região</th>
+                    <th>Habitantes</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% locais.forEach(function (local) { %>
+                    <tr>
+                        <td><%= local.nome %></td>
+                        <td><%= local.regiao %></td>
+                        <td><%= local.habitantes %></td>
+                        <td><%= local.descricao %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container-img">
+        <img src="/images/terra-media.webp" alt="Imagem da Terra Média" class="img-mapa">
+    </div>
+</section>
+
+<%- include("partials/footer") %>
