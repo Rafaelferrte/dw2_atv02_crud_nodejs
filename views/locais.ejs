@@ -13,7 +13,7 @@
 
         <section class="formulario-container">
             <h2>Cadastrar locais</h2>
-
+    
             <form class="formulario-cadastro" action="/locais/cadastrar" method="POST">
                 <div class="campo">
                     <label for="local">Local</label>
@@ -27,7 +27,7 @@
 
                 <div class="campo">
                     <label for="habitantes">Habitantes</label>
-                    <input type="number" name="habitantes" id="habitantes" min="0" required>
+                    <input type="text" name="habitantes" id="habitantes" required>
                 </div>
 
                 <div class="campo">
@@ -59,10 +59,18 @@
             <tbody>
                 <% locais.forEach(function (local) { %>
                     <tr>
-                        <td><%= local.nome %></td>
+                        <td><%= local.local %></td>
                         <td><%= local.regiao %></td>
                         <td><%= local.habitantes %></td>
                         <td><%= local.descricao %></td>
+                        <!-- Botão de editar -->
+                        <td>
+                            <a href="/locais/editar/<%= local.id %>" class="btn btn-warning">Editar</a>
+                        </td>
+                        <!-- Botãoi excluir -->
+                        <td>
+                            <a href="/locais/excluir/<%= local.id %>" class="btn btn-danger" onclick="return confirm('Deseja mesmo excluir o local <%= locais.local %>')">Excluir</a>
+                        </td>
                     </tr>
                 <% }); %>
             </tbody>

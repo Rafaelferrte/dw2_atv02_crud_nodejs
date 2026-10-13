@@ -38,14 +38,15 @@ const personagens = [
 ];
 
 router.get("/personagens", function (req, res) {
-    Personagem.findAll().then((personagens) => {
-        res.render("personagens", { 
-            personagens : personagens,
-        });
-    }).catch((error) => {
+  Personagem.findAll()
+    .then((personagens) => {
+      res.render("personagens", {
+        personagens: personagens,
+      });
+    })
+    .catch((error) => {
       console.log(`Ocorreu um erro ao listar os personagens: Erro: ${error}`);
     });
-  
 });
 
 router.post("/personagens/cadastrar", (req, res) => {
@@ -65,6 +66,22 @@ router.post("/personagens/cadastrar", (req, res) => {
     })
     .catch((error) => {
       console.log(`Ocorreu um erro ao cadastrar o personagem. Erro: ${error}`);
+    });
+});
+
+router.get("/personagens/excluir/:id", (req, res) => {
+  const id = req.params.id;
+
+  Personagem.destroy({
+    where: {
+      id: id,
+    },
+  })
+    .then(() => {
+      res.redirect("/personagens");
+    })
+    .catch((error) => {
+      console.log(`Ocorreu um erro ao excluir o personagem. Erro: ${error}`);
     });
 });
 
