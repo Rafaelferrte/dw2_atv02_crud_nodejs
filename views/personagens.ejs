@@ -10,6 +10,41 @@
         </p>
     </div>
 
+    <div class="formularios-cadastro">
+        <section class="formulario-container">
+            <h2>Cadastrar personagens</h2>
+
+            <form class="formulario-cadastro" action="/personagens/cadastrar" method="POST">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="raca">Raça</label>
+                    <input type="text" name="raca" id="raca" required>
+                </div>
+
+                <div class="campo">
+                    <label for="origem">Origem</label>
+                    <input type="text" name="origem" id="origem" required>
+                </div>
+
+                <div class="campo">
+                    <label for="papel">Papel</label>
+                    <input type="text" name="papel" id="papel" required>
+                </div>
+
+                <div class="botoes-formulario">
+                    <button type="submit" class="btn-cadastrar">Cadastrar</button>
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <br>
+    <br>
     <div class="tabela-container">
         <table>
             <thead>

@@ -9,6 +9,42 @@
         </p>
     </div>
 
+    <div class="formularios-cadastro">
+
+        <section class="formulario-container">
+            <h2>Cadastrar locais</h2>
+
+            <form class="formulario-cadastro" action="/locais/cadastrar" method="POST">
+                <div class="campo">
+                    <label for="local">Local</label>
+                    <input type="text" name="local" id="local" required>
+                </div>
+
+                <div class="campo">
+                    <label for="regiao">Região</label>
+                    <input type="text" name="regiao" id="regiao" required>
+                </div>
+
+                <div class="campo">
+                    <label for="habitantes">Habitantes</label>
+                    <input type="number" name="habitantes" id="habitantes" min="0" required>
+                </div>
+
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+                    <textarea name="descricao" id="descricao" rows="4" required></textarea>
+                </div>
+
+                <div class="botoes-formulario">
+                    <button type="submit" class="btn-cadastrar">Cadastrar</button>
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <br>
+    <br>
+
     <div class="tabela-container">
         <table>
             <thead>

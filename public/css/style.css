@@ -204,3 +204,113 @@ tbody tr:last-child td {
         font-size: 14px;
     }
 }
+
+
+/* Formulários de cadastro */
+.formulario-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #fffdf6;
+    border: 1px solid #c7b994;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(31, 45, 27, 0.12);
+}
+
+.formulario-container h1 {
+    margin-bottom: 30px;
+    color: #31452d;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    text-align: center;
+}
+
+.formulario-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.formulario-cadastro .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario-cadastro label {
+    color: #31452d;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.formulario-cadastro input,
+.formulario-cadastro textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #c7b994;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #252c1f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario-cadastro textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.formulario-cadastro input:focus,
+.formulario-cadastro textarea:focus {
+    outline: none;
+    border-color: #31452d;
+    box-shadow: 0 0 0 3px rgba(49, 69, 45, 0.12);
+}
+
+.botoes-formulario {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.botoes-formulario button {
+    flex: 1;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-cadastrar {
+    background-color: #31452d;
+    color: #ffffff;
+}
+
+.btn-cadastrar:hover {
+    background-color: #16251b;
+    transform: translateY(-2px);
+}
+
+.btn-limpar {
+    background-color: #e9dfc7;
+    color: #31452d;
+    border: 1px solid #c7b994 !important;
+}
+
+.btn-limpar:hover {
+    background-color: #d8c9a5;
+}
+
+@media (max-width: 700px) {
+    .formulario-container {
+        padding: 24px;
+    }
+
+    .formulario-container h1 {
+        font-size: 30px;
+    }
+}
