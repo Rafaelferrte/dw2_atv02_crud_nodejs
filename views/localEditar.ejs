@@ -1,30 +1,49 @@
-<%- include ('partials/header.ejs') %>
-<%- include ('partials/navbar.ejs') %>
 
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h1>Editar cliente</h1>
-            <hr>
+<%- include('partials/header.ejs') %>
+
+<main class="conteudo pagina-categoria">
+    <div class="formulario-container">
+        <div class="formulario-header">
+            <p class="subtitulo">Terra-média</p>
+            <h1>Editar local</h1>
+            <p>Atualize as informações deste local.</p>
         </div>
-        <div class="card-body">
-            <form action="/locais/alterar" method="POST">
-                <label for="local">Local</label>
-                <input type="text" name="nome" id="nome" class="form-control" required value="<%= cliente.nome%>">
-                <label for="regiao">Região</label>
-                <input type="text" name="cpf" id="cpf" class="form-control" required value="<%= cliente.cpf%>">
-                <label for="endereco">Habitantes</label>
-                <input type="text" name="endereco" id="endereco" class="form-control" required value="<%= cliente.endereco%>">
-                <br>
-                <input type="hidden" name="id" id="id" value="<%= cliente.id %>">
-                <button type="submit" class="btn btn-warning" onclick="return confirm('Deseja mesmo editar o cliente <%= cliente.nome %>')">Alterar</button>
-                <a href="/locais">
-                    <button type="button" class="btn btn-danger">Cancelar</button>
-                </a>
+
+        <div class="formulario-body">
+            <form class="formulario-editar" action="/locais/alterar" method="POST">
+                <div class="campo">
+                    <label for="local">Local</label>
+                    <input type="text" name="local" id="local" required value="<%= local.local %>">
+                </div>
+
+                <div class="campo">
+                    <label for="regiao">Região</label>
+                    <input type="text" name="regiao" id="regiao" required value="<%= local.regiao %>">
+                </div>
+
+                <div class="campo">
+                    <label for="habitantes">Habitantes</label>
+                    <input type="text" name="habitantes" id="habitantes" required value="<%= local.habitantes %>">
+                </div>
+
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="descricao" id="descricao" required value="<%= local.descricao %>">
+                </div>
+
+                <input type="hidden" name="id" id="id" value="<%= local.id %>">
+
+                <div class="botoes-formulario">
+                    <button type="submit" class="btn-alterar"
+                        onclick="return confirm('Deseja mesmo editar o local <%= local.local %>')">
+                        Alterar
+                    </button>
+
+                    <a href="/locais" class="btn-cancelar">Cancelar</a>
+                </div>
             </form>
         </div>
     </div>
-</div>
+</main>
 
-
-<%- include ('partials/footer.ejs') %>
+<%- include('partials/footer.ejs') %>

@@ -53,6 +53,8 @@
                     <th>Região</th>
                     <th>Habitantes</th>
                     <th>Descrição</th>
+                     <!-- COluna de ações -->
+                    <th colspan="2">Ações</th>
                 </tr>
             </thead>
 
@@ -65,11 +67,11 @@
                         <td><%= local.descricao %></td>
                         <!-- Botão de editar -->
                         <td>
-                            <a href="/locais/editar/<%= local.id %>" class="btn btn-warning">Editar</a>
+                            <a href="/locais/editar/<%= local.id %>" style=" text-decoration: none;">Editar</a>
                         </td>
                         <!-- Botãoi excluir -->
                         <td>
-                            <a href="/locais/excluir/<%= local.id %>" class="btn btn-danger" onclick="return confirm('Deseja mesmo excluir o local <%= locais.local %>')">Excluir</a>
+                            <a href="/locais/excluir/<%= local.id %>" style=" text-decoration: none;" onclick="return confirm('Deseja mesmo excluir o local <%= locais.local %>')">Excluir</a>
                         </td>
                     </tr>
                 <% }); %>

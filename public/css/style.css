@@ -314,3 +314,132 @@ tbody tr:last-child td {
         font-size: 30px;
     }
 }
+
+
+/* Cartãode edição */
+.formulario-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #fffdf6;
+    border: 1px solid #c7b994;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(31, 45, 27, 0.12);
+    animation: aparecer 0.6s ease;
+}
+
+/* Cabeçalho */
+.formulario-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.formulario-header h1 {
+    margin: 12px 0;
+    color: #31452d;
+    font-family: Georgia, serif;
+    font-size: 36px;
+}
+
+.formulario-header p:last-child {
+    color: #596254;
+    line-height: 1.6;
+}
+
+/* Formulário */
+.formulario-editar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.formulario-editar .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario-editar label {
+    color: #31452d;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.formulario-editar input:not([type="hidden"]) {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #c7b994;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #252c1f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario-editar input:not([type="hidden"]):focus {
+    outline: none;
+    border-color: #31452d;
+    box-shadow: 0 0 0 3px rgba(49, 69, 45, 0.12);
+}
+
+/* Botões */
+.botoes-formulario {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.botoes-formulario button,
+.botoes-formulario a {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-alterar {
+    background-color: #31452d;
+    color: #ffffff;
+}
+
+.btn-alterar:hover {
+    background-color: #16251b;
+    transform: translateY(-2px);
+}
+
+.btn-cancelar {
+    background-color: #e9dfc7;
+    border: 1px solid #c7b994 !important;
+    color: #31452d;
+}
+
+.btn-cancelar:hover {
+    background-color: #d8c9a5;
+}
+
+@media (max-width: 700px) {
+    .formulario-container {
+        padding: 24px;
+    }
+
+    .formulario-header h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .botoes-formulario {
+        flex-direction: column;
+    }
+}

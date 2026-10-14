@@ -53,6 +53,8 @@
                     <th>Raça</th>
                     <th>Origem</th>
                     <th>Papel</th>
+                     <!-- COluna de ações -->
+                    <th  colspan="2">Ações</th>
                 </tr>
             </thead>
 
@@ -65,11 +67,11 @@
                         <td><%= personagem.papel %></td>
                         <!-- Botão de editar -->
                         <td>
-                            <a href="/personagens/editar/<%= personagem.id %>" class="btn btn-warning">Editar</a>
+                            <a href="/personagens/editar/<%= personagem.id %>" style=" text-decoration: none;">Editar</a>
                         </td>
                         <!-- Botãoi excluir -->
                         <td>
-                            <a href="/personagens/excluir/<%= personagem.id %>" class="btn btn-danger" onclick="return confirm('Deseja mesmo excluir o personagem <%= personagem.nome %>')">Excluir</a>
+                            <a href="/personagens/excluir/<%= personagem.id %>" style=" text-decoration: none;" onclick="return confirm('Deseja mesmo excluir o personagem <%= personagem.nome %>')">Excluir</a>
                         </td>
                     </tr>
                 <% }); %>

@@ -85,4 +85,40 @@ router.get("/personagens/excluir/:id", (req, res) => {
     });
 });
 
+router.get("/personagens/editar/:id", (req,res) => {
+  const id = req.params.id;
+
+  Personagem.findByPk(id)
+    .then((personagem) => {
+      res.render("personagemEditar",
+        { personagem: personagem},
+      );
+    })
+    .catch((error) => {
+      console.log(`Ocorreu um erro ao buscar o personagem. Erro ${error}`);
+    });
+});
+
+router.post("/personagens/alterar", (req,res) => {
+  const id = req.body.id;
+  const nome = req.body.nome;
+  const raca = req.body.raca;
+  const origem = req.body.origem;
+  const papel = req.body.papel;
+
+  Personagem.update(
+    {
+      nome: nome,
+      raca: raca,
+      origem: origem,
+      papel: papel,
+    },
+    { where: {id: id}}
+  ).then(() => {
+    res.redirect("/personagens");
+  }).catch((error) => {
+    console.log(`Ocorreu um erro ao editar o personagem. Erro: ${error}`);
+  });
+});
+
 export default router;

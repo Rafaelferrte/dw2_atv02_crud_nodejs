@@ -103,7 +103,7 @@ router.get("/locais/editar/:id", (req, res) => {
     });
 });
 
-router.post("/clientes/alterar", (req, res) => {
+router.post("/locais/alterar", (req, res) => {
   // Coletando os dados do formulario
   const id = req.body.id;
   const local = req.body.local;
