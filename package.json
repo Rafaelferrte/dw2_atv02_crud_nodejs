@@ -1,27 +1,30 @@
 {
-  "name": "atv01_node_site",
+  "name": "middle-earth-crud",
   "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/Rafaelferrte/atv01_node_site#readme",
+  "description": "Aplicação acadêmica CRUD com Node.js, Express, Sequelize e MySQL",
+  "homepage": "https://github.com/Rafaelferrte/dw2_atv02_crud_nodejs#readme",
   "bugs": {
-    "url": "https://github.com/Rafaelferrte/atv01_node_site/issues"
+    "url": "https://github.com/Rafaelferrte/dw2_atv02_crud_nodejs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rafaelferrte/atv01_node_site.git"
+    "url": "git+https://github.com/Rafaelferrte/dw2_atv02_crud_nodejs.git"
   },
   "license": "ISC",
-  "author": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
     "mysql2": "^3.24.5",
     "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
