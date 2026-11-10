@@ -1,27 +1,23 @@
-//Importando o arquivo de conexão
 import connection from "../config/sequelize-config.js";
-// Importando a biblioteca sequelize
-import Sequelize from "sequelize";
+import { DataTypes } from "sequelize";
 
 const Personagem = connection.define("personagens", {
-    nome: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    raca: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    origem: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    papel: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
+  nome: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  raca: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  origem: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  papel: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
 });
-
-Personagem.sync({ force: false });
 
 export default Personagem;
